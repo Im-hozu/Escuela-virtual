@@ -100,7 +100,7 @@ class TaskController extends Controller
               //Recojo los datos del usuario
              $user = $jwtAuth->checkToken($hash,true);
  
-             //Guardo el comentario
+             //Guardo la tarea
              $task = new Task();
              $task->section_id = $params->section_id;
              $task->title = $params->title;

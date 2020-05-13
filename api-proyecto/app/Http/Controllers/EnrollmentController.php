@@ -11,7 +11,7 @@ use Illuminate\Support\Arr;
 
 class EnrollmentController extends Controller
 {
-    /*Devuelve todos los enrollments */
+    /*Devuelve todos los enrollments*/
     public function index(Request $request){
         //Compruebo que el usuario esta logeado
         $hash = $request->header('Authorization',null);

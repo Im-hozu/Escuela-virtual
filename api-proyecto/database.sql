@@ -80,7 +80,7 @@ CREATE TABLE videos(
     description varchar(255),
     status varchar(20),
     created_at datetime DEFAULT NULL,
-    update_at datetime DEFAULT NULL,
+    updated_at datetime DEFAULT NULL,
     CONSTRAINT pk_videos PRIMARY KEY(id),
     CONSTRAINT fk_videos_files FOREIGN KEY(file_id) REFERENCES files(id),
     CONSTRAINT fk_videos_sections FOREIGN KEY (section_id) REFERENCES sections(id)
@@ -144,7 +144,6 @@ CREATE TABLE tasksfiles(
      id int(255) auto_increment not null,
     task_id int(255) not null,
     file_id int(255) not null,
-    role varchar(20),
     created_at datetime DEFAULT NULL,
     updated_at datetime DEFAULT NULL,
     CONSTRAINT pk_tasksfiles PRIMARY KEY(id),

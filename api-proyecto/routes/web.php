@@ -25,7 +25,11 @@ Route::resource('/api/comment','CommentController');
 Route::resource('/api/enrollment','EnrollmentController');
 Route::resource('/api/recurse','RecurseController');
 Route::resource('/api/task','TaskController');
+Route::resource('/api/taskfile','TaskfileController');
+Route::resource('/api/deliver','DeliverController');
+Route::resource('/api/file','FileController');
+Route::resource('/api/message','MessageController');
 
 
 //Ruta de prueba
-Route::delete('/api/recurse/delete/{id}','RecurseController@destroy');
+//Route::post('/api/deliver','DeliverController@store');

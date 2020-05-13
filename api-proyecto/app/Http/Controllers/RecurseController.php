@@ -34,7 +34,7 @@ class RecurseController extends Controller
                'code' => 300,
            );
        }
-       return response()->json($data,200);
+       return response()->json($data,$data['code']);
    }
 
    /*Devuelve un recurso en función de su id y el creador del mismo en un formato agradable */
@@ -65,7 +65,7 @@ class RecurseController extends Controller
              'code' => 300,
          );
      }
-     return response()->json($data,200);
+     return response()->json($data,$data['code']);
    }
 
    /*Almacenar un recurso */
@@ -108,7 +108,7 @@ class RecurseController extends Controller
     }
     $file->save();
 
-    //Creo el video
+    //Creo el recurso
     $recurse = new Recurse();
     $recurse->file_id = $file->id;
     $recurse->section_id = $params->section_id;
@@ -134,7 +134,7 @@ class RecurseController extends Controller
             'code' => 300,
         );
     }
-    return response()->json($data,200);
+    return response()->json($data,$data['code']);
     }
 
     /*Borrar un recurso en función de su id */
@@ -175,6 +175,6 @@ class RecurseController extends Controller
                'code' => 300,
            );
        }
-       return response()->json($data,200);
+       return response()->json($data,$data['code']);
    }
 }
